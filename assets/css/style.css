@@ -27,10 +27,9 @@ p {
 /* header and footer  */
 
 
-footer,
+footer .jumbotron,
 header .jumbotron,
-.header
- {
+.header, .footer {
   text-align: center;
   padding: 5px;
   margin: 0 auto;
@@ -41,21 +40,19 @@ header .jumbotron,
   color: var(--colorWhite);
 }
 
-header .jumbotron {
-  border-bottom : 0;
-}
 
 .header {
   background-color: var(--colorElectricBlue);
   margin-bottom: 10px;
 }
 
-footer {
+.footer {
   margin-top: 40px; 
   margin-bottom: 20px; 
   font-size: 1rem;
   background-color: var(--colorBrownMonkey);
 }
+
 
 header::after,
 footer::after {
@@ -65,15 +62,37 @@ footer::after {
   height: 2px;
 }
 
-footer nav,
 .footerP, 
 .footerTag, 
 .footerCopyright {
   font-size: 1rem;
 }
 
-footer nav {
-  margin-bottom: 0px;
+
+
+ul#footerNav li {
+  display: inline;
+  padding: 40px;
+}
+
+
+ul#footerNav li  a {
+  font-size: 2rem;
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  border: 0;
+  color: var(--fontVintage);
+}
+
+ul#footerNav li  a,
+ul#footerNav li  a:focus {
+  color: var(--fontVintage);
+}
+
+ul#footerNav li a:hover,
+ul#footerNav li a:focus:hover, 
+ul#footerNav li a.active:hover {
+  color: var(--colorTealMedium);
+  text-shadow: 1px 1px var(--colorGreenPale);
 }
 
 .footerP {
@@ -95,28 +114,10 @@ footer nav {
   font-style: italic;
 }
 
-
-footer a {
-  font-size: 1.8rem;
-  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
-  letter-spacing: 0.5rem;
-  text-transform: uppercase;
-  padding-right: 2px;
-  border: 0;
-  color: var(--fontVintage);
+main {
+  margin-bottom: 40px;
 }
 
-footer a,
-footer a:focus {
-  color: var(--fontVintage);
-}
-
-footer a:hover,
-footer a:focus:hover, 
-footer a.active:hover {
-  color: var(--colorElectricBlue);
-  text-shadow: 1px 1px var(--colorWheat);
-}
 
 /* global text styling */
 
@@ -166,8 +167,26 @@ button:active {
   color: var(--fontVintage);
 }
 
-
 /* starter CSS*/
+
+table,
+th,
+td {
+  color: var(--colorWhite);
+  font-size: 1.2rem;
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+}
+
+table {
+  margin-top: 0;
+  background-color: var(--colorGreen);
+  border: solid 1px var(--colorWhite);
+  border-radius: 5px;
+  box-shadow: 5px 5px var(--colorCharcoal);
+}
+
 
 .lead {
   color: var(--colorWhite);
