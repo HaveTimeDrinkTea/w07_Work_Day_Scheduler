@@ -26,9 +26,11 @@ p {
 
 /* header and footer  */
 
-header,
+
 footer,
-.wrapper {
+header .jumbotron,
+.header
+ {
   text-align: center;
   padding: 5px;
   margin: 0 auto;
@@ -39,7 +41,11 @@ footer,
   color: var(--colorWhite);
 }
 
-header {
+header .jumbotron {
+  border-bottom : 0;
+}
+
+.header {
   background-color: var(--colorElectricBlue);
   margin-bottom: 10px;
 }
@@ -163,6 +169,10 @@ button:active {
 
 /* starter CSS*/
 
+.lead {
+  color: var(--colorWhite);
+}
+
 textarea {
   background: transparent;
   border: none;
@@ -194,7 +204,7 @@ textarea {
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;
+  /* border-top: 1px solid white; */
 }
 
 .hour {
