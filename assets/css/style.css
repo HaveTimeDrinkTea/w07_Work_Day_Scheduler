@@ -24,34 +24,85 @@ p {
   line-height: 2rem;
 }
 
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--colorWhite);
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--colorWhite);
+}
+
+
+/* buttons */
+button {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: auto;
+  color: var(--colorWhite);
+  background-color: var(--colorGreen);
+  border: solid 1px var(--colorWhite);
+  border-radius: 5px;
+  box-shadow: 5px 5px var(--colorCharcoal);
+}
+
+button:hover, 
+button:visited {
+  background-color: var(--colorRed);
+  box-shadow: 5px 5px var(--colorWheat);
+  color: var(--colorWhite);
+}
+
+button:active {
+  background-color: var(--colorRed);
+  box-shadow: 5px 5px var(--colorWheat);
+  transform: translateY(4px);
+  color: var(--fontVintage);
+}
+
+
 /* header and footer  */
 
+.jumbotron {
+  margin: 20px !important;
+  padding: 0px !important; 
+}
 
-footer .jumbotron,
-header .jumbotron,
-.header, .footer {
+.header, 
+.footer {
   text-align: center;
   padding: 5px;
   margin: 0 auto;
-  max-width: 80vw;
+  max-width: 85vw;
   border: solid 0.3rem var(--colorWhite);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
   border-radius: 5px;
   color: var(--colorWhite);
 }
 
-
 .header {
   background-color: var(--colorElectricBlue);
-  margin-bottom: 10px;
 }
 
 .footer {
-  margin-top: 40px; 
-  margin-bottom: 20px; 
-  font-size: 1rem;
+  margin-top: 150px; 
+  padding: 10px;
   background-color: var(--colorBrownMonkey);
+  font-size: 1rem;
 }
+
+/* .container {
+  margin-bottom: 50px;
+} */
 
 
 header::after,
@@ -61,13 +112,6 @@ footer::after {
   width: 100%;
   height: 2px;
 }
-
-.footerP, 
-.footerTag, 
-.footerCopyright {
-  font-size: 1rem;
-}
-
 
 
 ul#footerNav li {
@@ -114,77 +158,51 @@ ul#footerNav li a.active:hover {
   font-style: italic;
 }
 
+/* Main Sections */
+
 main {
+  margin-top: 0;
   margin-bottom: 40px;
 }
 
 
-/* global text styling */
+/* left side */
 
-
-
-h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  color: var(--colorWhite);
-}
-
-h2 {
-  font-size: 2rem;
-  text-align: center;
-  color: var(--colorWhite);
+.sideText {
+  margin-top: 20px;
+  font-size: 1rem;
+  text-align: left;
 }
 
 
-/* buttons */
-button {
-  display: inline-block;
-  padding: 10px;
-  margin: 10px;
-  font-size: 2rem;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: auto;
-  color: var(--colorWhite);
+/* starter CSS*/
+
+
+table {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-collapse: collapse !important;
   background-color: var(--colorGreen);
-  border: solid 1px var(--colorWhite);
+  border: solid 0.3rem var(--colorWhite) !important;
   border-radius: 5px;
   box-shadow: 5px 5px var(--colorCharcoal);
 }
 
-button:hover, 
-button:visited {
-  background-color: var(--colorRed);
-  box-shadow: 5px 5px var(--colorWheat);
+thead, tbody {
   color: var(--colorWhite);
+  font-size: 1rem;
+  border: solid 0.3rem var(--colorWhite) !important;
 }
 
-button:active {
-  background-color: var(--colorRed);
-  box-shadow: 5px 5px var(--colorWheat);
-  transform: translateY(4px);
-  color: var(--fontVintage);
-}
 
-/* starter CSS*/
-
-table,
-th,
-td {
-  color: var(--colorWhite);
-  font-size: 1.2rem;
-  padding: 5px;
+th {
   margin: 0;
   text-align: center;
 }
 
-table {
-  margin-top: 0;
-  background-color: var(--colorGreen);
-  border: solid 1px var(--colorWhite);
-  border-radius: 5px;
-  box-shadow: 5px 5px var(--colorCharcoal);
+td {
+  margin: 0;
+  text-align: left;
 }
 
 
