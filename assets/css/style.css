@@ -1,7 +1,195 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 67.5%;
   line-height: 1;
+  color: var(--colorWhite);
+  background-color: var(--colorTealDarker);  
+}
+
+a {
+  color: var(--fontVintage);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
+a:hover {
+  color: var(--colorLemon);
+  text-shadow: 2px 2px var(--colorCharcoal);
+}
+
+p {
+  color: var(--colorWhite);
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+/* header and footer  */
+
+
+footer .jumbotron,
+header .jumbotron,
+.header, .footer {
+  text-align: center;
+  padding: 5px;
+  margin: 0 auto;
+  max-width: 80vw;
+  border: solid 0.3rem var(--colorWhite);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
+  border-radius: 5px;
+  color: var(--colorWhite);
+}
+
+
+.header {
+  background-color: var(--colorElectricBlue);
+  margin-bottom: 10px;
+}
+
+.footer {
+  margin-top: 40px; 
+  margin-bottom: 20px; 
+  font-size: 1rem;
+  background-color: var(--colorBrownMonkey);
+}
+
+
+header::after,
+footer::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+}
+
+.footerP, 
+.footerTag, 
+.footerCopyright {
+  font-size: 1rem;
+}
+
+
+
+ul#footerNav li {
+  display: inline;
+  padding: 40px;
+}
+
+
+ul#footerNav li  a {
+  font-size: 2rem;
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  border: 0;
+  color: var(--fontVintage);
+}
+
+ul#footerNav li  a,
+ul#footerNav li  a:focus {
+  color: var(--fontVintage);
+}
+
+ul#footerNav li a:hover,
+ul#footerNav li a:focus:hover, 
+ul#footerNav li a.active:hover {
+  color: var(--colorTealMedium);
+  text-shadow: 1px 1px var(--colorGreenPale);
+}
+
+.footerP {
+  font-style: italic;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footerTags {
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--colorWheat);
+}
+
+.footerCopyright {
+  font-size: 1rem;
+  margin-top: 0px;
+  font-style: italic;
+}
+
+main {
+  margin-bottom: 40px;
+}
+
+
+/* global text styling */
+
+
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--colorWhite);
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--colorWhite);
+}
+
+
+/* buttons */
+button {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: auto;
+  color: var(--colorWhite);
+  background-color: var(--colorGreen);
+  border: solid 1px var(--colorWhite);
+  border-radius: 5px;
+  box-shadow: 5px 5px var(--colorCharcoal);
+}
+
+button:hover, 
+button:visited {
+  background-color: var(--colorRed);
+  box-shadow: 5px 5px var(--colorWheat);
+  color: var(--colorWhite);
+}
+
+button:active {
+  background-color: var(--colorRed);
+  box-shadow: 5px 5px var(--colorWheat);
+  transform: translateY(4px);
+  color: var(--fontVintage);
+}
+
+/* starter CSS*/
+
+table,
+th,
+td {
+  color: var(--colorWhite);
+  font-size: 1.2rem;
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+}
+
+table {
+  margin-top: 0;
+  background-color: var(--colorGreen);
+  border: solid 1px var(--colorWhite);
+  border-radius: 5px;
+  box-shadow: 5px 5px var(--colorCharcoal);
+}
+
+
+.lead {
+  color: var(--colorWhite);
 }
 
 textarea {
@@ -16,9 +204,11 @@ textarea {
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: var(--colorWhite);
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border: 0;
+  /* border-bottom: 10px solid black; */
+
 }
 
 .description {
@@ -33,7 +223,7 @@ textarea {
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;
+  /* border-top: 1px solid white; */
 }
 
 .hour {
