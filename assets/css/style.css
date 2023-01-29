@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   font-size: 67.5%;
   line-height: 1;
   color: var(--colorWhite);
@@ -24,33 +24,82 @@ p {
   line-height: 2rem;
 }
 
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--colorWhite);
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--colorWhite);
+}
+
+
+/* buttons */
+button {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: auto;
+  color: var(--colorWhite);
+  background-color: var(--colorGreen);
+  border: solid 2px var(--colorWhite);
+  border-radius: 2px;
+  box-shadow: 3px 3px var(--colorCharcoal);
+}
+
+button:hover, 
+button:visited {
+  background-color: var(--colorRed);
+  box-shadow: 3px 3px var(--colorWheat);
+  color: var(--colorWhite);
+}
+
+button:active {
+  background-color: var(--colorRed);
+  box-shadow: 3px 3px var(--colorWheat);
+  transform: translateY(4px);
+  color: var(--fontVintage);
+}
+
+
+
 /* header and footer  */
 
+.jumbotron {
+  margin: 20px !important;
+  padding: 0px !important; 
+}
 
-footer .jumbotron,
-header .jumbotron,
-.header, .footer {
+.header, 
+.footer {
   text-align: center;
   padding: 5px;
   margin: 0 auto;
-  max-width: 80vw;
+  max-width: 85vw;
   border: solid 0.3rem var(--colorWhite);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
   border-radius: 5px;
   color: var(--colorWhite);
 }
 
-
 .header {
   background-color: var(--colorElectricBlue);
-  margin-bottom: 10px;
 }
 
 .footer {
-  margin-top: 40px; 
-  margin-bottom: 20px; 
-  font-size: 1rem;
+  margin-top: 30px; 
+  margin-bottom: 20px;
+  padding: 10px;
   background-color: var(--colorBrownMonkey);
+  font-size: 1rem;
 }
 
 
@@ -62,12 +111,9 @@ footer::after {
   height: 2px;
 }
 
-.footerP, 
-.footerTag, 
-.footerCopyright {
-  font-size: 1rem;
+.lead {
+  color: var(--colorWhite);
 }
-
 
 
 ul#footerNav li {
@@ -114,91 +160,159 @@ ul#footerNav li a.active:hover {
   font-style: italic;
 }
 
-main {
-  margin-bottom: 40px;
-}
-
-
-/* global text styling */
+/* Main Sections */
 
 
 
-h1 {
-  font-size: 2.5rem;
+.container {
   text-align: center;
-  color: var(--colorWhite);
-}
-
-h2 {
-  font-size: 2rem;
-  text-align: center;
-  color: var(--colorWhite);
-}
-
-
-/* buttons */
-button {
-  display: inline-block;
-  padding: 10px;
-  margin: 10px;
-  font-size: 2rem;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: auto;
-  color: var(--colorWhite);
-  background-color: var(--colorGreen);
-  border: solid 1px var(--colorWhite);
+  padding: 5px;
+  margin: 0 auto;
+  max-width: 85vw;
+  border: solid 0.3rem var(--colorWhite);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
   border-radius: 5px;
-  box-shadow: 5px 5px var(--colorCharcoal);
-}
-
-button:hover, 
-button:visited {
-  background-color: var(--colorRed);
-  box-shadow: 5px 5px var(--colorWheat);
   color: var(--colorWhite);
 }
 
-button:active {
-  background-color: var(--colorRed);
-  box-shadow: 5px 5px var(--colorWheat);
-  transform: translateY(4px);
-  color: var(--fontVintage);
+/* left side */
+
+
+.card {
+  background-color: transparent;
+  border: 0;
 }
+
+.mindful,
+.bubble {
+	position: relative;
+  margin: 10px auto;
+  margin-left: 10px;
+  padding: 10px;
+	border-radius: .5em;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  font-family: 'Pompiere','Lato', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+.mindful {
+	background: var(--colorOrange);
+}
+
+.mindful:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: var(--colorOrange);
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+
+.bubble {
+	background: var(--colorPink);
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.sideText {
+  margin-top: 20px;
+  margin-left: 15px;
+  font-size: 1rem;
+}
+
+.quotePerson {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  font-style: italic;
+  padding: 5px;
+  background-color: var(--colorGreen);
+  border: solid 1px var(--colorGreen);
+  border-radius: 10px;
+  max-width: 60%;
+  position: relative;
+  left: 30%;
+  float: right;
+}
+
 
 /* starter CSS*/
 
-table,
-th,
-td {
+
+table {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  border-collapse: collapse !important;
+  background-color: var(--colorGreen);
+  border: solid 0.3rem var(--colorWhite) !important;
+  border-radius: 5px;
+  /* box-shadow: 5px 5px var(--colorCharcoal); */
+}
+
+caption {
   color: var(--colorWhite);
   font-size: 1.2rem;
-  padding: 5px;
+}
+thead, tbody {
+  color: var(--colorWhite);
+  font-size: 1rem;
+  /* border: solid 0.3rem var(--colorWhite) !important; */
+}
+
+
+th {
   margin: 0;
   text-align: center;
 }
 
-table {
-  margin-top: 0;
-  background-color: var(--colorGreen);
-  border: solid 1px var(--colorWhite);
-  border-radius: 5px;
-  box-shadow: 5px 5px var(--colorCharcoal);
+td {
+  margin: 0;
+  text-align: left;
 }
 
+.hide {
+  display: none; 
+}
 
-.lead {
-  color: var(--colorWhite);
+.visible {
+  display: inline; 
 }
 
 textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
-  border-left: 1px solid black;
+  color: var(--colorWhite);
+  width: 100%;
+  outline: none;
+  /* border-left: 1px solid var(--colorLemon); */
   padding: 10px;
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  color: var(--colorLemon);
+  resize: none;
+  background: var(--colorPink90);
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid transparent;
 }
 
 .jumbotron {
@@ -220,10 +334,10 @@ textarea {
   border-radius: 15px;
 }
 
-.row {
+.row1 {
   white-space: pre-wrap;
   height: 80px;
-  /* border-top: 1px solid white; */
+  border-top: 1px solid white;
 }
 
 .hour {
@@ -232,19 +346,23 @@ textarea {
   border-top: 1px dashed #000000;
 }
 
-.past {
-  background-color: #d3d3d3;
-  color: white;
+.future,
+.now {
+  color: var(--colorWhite);
 }
 
-.present {
-  background-color: #ff6961;
-  color: white;
+
+.past {
+  background-color: var(--colorBrownMonkeyLight50);
+  color: var(--fontVintageDark);
+}
+
+.now {
+  background-color: var(--colorOrange);
 }
 
 .future {
-  background-color: #77dd77;
-  color: white;
+  background-color: var(--colorGreen);
 }
 
 .saveBtn {
