@@ -34,8 +34,4 @@ var quotesArray = [
 
 let randomIndex = Math.floor(Math.random() * quotesArray.length);
 
-console.log("the random index:", randomIndex);
-
-console.log(quotesArray[randomIndex]);
-
 $('#quoteOfDay').text(quotesArray[randomIndex]);
