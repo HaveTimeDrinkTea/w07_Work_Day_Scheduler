@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   font-size: 67.5%;
   line-height: 1;
   color: var(--colorWhite);
@@ -94,15 +94,12 @@ button:active {
 }
 
 .footer {
-  margin-top: 150px; 
+  margin-top: 30px; 
+  margin-bottom: 20px;
   padding: 10px;
   background-color: var(--colorBrownMonkey);
   font-size: 1rem;
 }
-
-/* .container {
-  margin-bottom: 50px;
-} */
 
 
 header::after,
@@ -111,6 +108,10 @@ footer::after {
   display: block;
   width: 100%;
   height: 2px;
+}
+
+.lead {
+  color: var(--colorWhite);
 }
 
 
@@ -160,18 +161,71 @@ ul#footerNav li a.active:hover {
 
 /* Main Sections */
 
-main {
-  margin-top: 0;
-  margin-bottom: 40px;
-}
 
+
+.container {
+  text-align: center;
+  padding: 5px;
+  margin: 0 auto;
+  max-width: 85vw;
+  border: solid 0.3rem var(--colorWhite);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px 0px;
+  border-radius: 5px;
+  color: var(--colorWhite);
+}
 
 /* left side */
 
+/* .mindful {
+font-size: 0.8rem;
+font-style: italic;
+color: var(--colorWhite);
+} */
+
+
+.mindful {
+	position: relative;
+  margin: 10px auto;
+  padding: 10px;
+	background: #00aabb;
+	border-radius: .5em;
+  font-size: 1.3rem;
+  /* font-style: italic; */
+  line-height: 1.5rem;
+  /* font-family: "Cabin"; */
+  font-family: 'Pompiere','Lato', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+.mindful:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #00aabb;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.alignLeft {
+  text-align: right;
+}
 .sideText {
   margin-top: 20px;
   font-size: 1rem;
-  text-align: left;
+}
+
+.quotePerson {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
 }
 
 
@@ -179,19 +233,24 @@ main {
 
 
 table {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
   border-collapse: collapse !important;
   background-color: var(--colorGreen);
   border: solid 0.3rem var(--colorWhite) !important;
   border-radius: 5px;
-  box-shadow: 5px 5px var(--colorCharcoal);
+  /* box-shadow: 5px 5px var(--colorCharcoal); */
 }
 
+caption {
+  color: var(--colorWhite);
+  font-size: 1.2rem;
+}
 thead, tbody {
   color: var(--colorWhite);
   font-size: 1rem;
-  border: solid 0.3rem var(--colorWhite) !important;
+  /* border: solid 0.3rem var(--colorWhite) !important; */
 }
 
 
@@ -206,9 +265,6 @@ td {
 }
 
 
-.lead {
-  color: var(--colorWhite);
-}
 
 textarea {
   background: transparent;
@@ -238,10 +294,10 @@ textarea {
   border-radius: 15px;
 }
 
-.row {
+.row1 {
   white-space: pre-wrap;
   height: 80px;
-  /* border-top: 1px solid white; */
+  border-top: 1px solid white;
 }
 
 .hour {
