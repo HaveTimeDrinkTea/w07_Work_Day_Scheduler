@@ -41,30 +41,30 @@ h2 {
 /* buttons */
 button {
   display: inline-block;
-  padding: 10px;
-  margin: 10px;
-  font-size: 2rem;
+  padding: 5px;
+  margin: 5px;
+  font-size: 1.2rem;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: auto;
   color: var(--colorWhite);
   background-color: var(--colorGreen);
-  border: solid 1px var(--colorWhite);
-  border-radius: 5px;
-  box-shadow: 5px 5px var(--colorCharcoal);
+  border: solid 2px var(--colorWhite);
+  border-radius: 2px;
+  box-shadow: 3px 3px var(--colorCharcoal);
 }
 
 button:hover, 
 button:visited {
   background-color: var(--colorRed);
-  box-shadow: 5px 5px var(--colorWheat);
+  box-shadow: 3px 3px var(--colorWheat);
   color: var(--colorWhite);
 }
 
 button:active {
   background-color: var(--colorRed);
-  box-shadow: 5px 5px var(--colorWheat);
+  box-shadow: 3px 3px var(--colorWheat);
   transform: translateY(4px);
   color: var(--fontVintage);
 }
@@ -176,24 +176,26 @@ ul#footerNav li a.active:hover {
 
 /* left side */
 
-/* .mindful {
-font-size: 0.8rem;
-font-style: italic;
-color: var(--colorWhite);
-} */
 
+.card {
+  background-color: transparent;
+  border: 0;
+}
 
-.mindful {
+.mindful,
+.bubble {
 	position: relative;
   margin: 10px auto;
+  margin-left: 10px;
   padding: 10px;
-	background: #00aabb;
 	border-radius: .5em;
   font-size: 1.3rem;
-  /* font-style: italic; */
   line-height: 1.5rem;
-  /* font-family: "Cabin"; */
   font-family: 'Pompiere','Lato', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+.mindful {
+	background: var(--colorOrange);
 }
 
 .mindful:after {
@@ -204,11 +206,15 @@ color: var(--colorWhite);
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
-	border-top-color: #00aabb;
+	border-top-color: var(--colorOrange);
 	border-bottom: 0;
 	border-right: 0;
 	margin-left: -10px;
 	margin-bottom: -20px;
+}
+
+.bubble {
+	background: var(--colorPink);
 }
 
 .alignRight {
@@ -216,16 +222,31 @@ color: var(--colorWhite);
 }
 
 .alignLeft {
-  text-align: right;
+  text-align: left;
 }
+
+.alignCenter {
+  text-align: center;
+}
+
 .sideText {
   margin-top: 20px;
+  margin-left: 15px;
   font-size: 1rem;
 }
 
 .quotePerson {
   font-size: 0.8rem;
   line-height: 0.8rem;
+  font-style: italic;
+  padding: 5px;
+  background-color: var(--colorGreen);
+  border: solid 1px var(--colorGreen);
+  border-radius: 10px;
+  max-width: 60%;
+  position: relative;
+  left: 30%;
+  float: right;
 }
 
 
@@ -270,9 +291,21 @@ textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
-  border-left: 1px solid black;
+  color: var(--colorWhite);
+  width: 100%;
+  outline: none;
+  /* border-left: 1px solid var(--colorLemon); */
   padding: 10px;
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  color: var(--colorLemon);
+  resize: none;
+  background: var(--colorPink90);
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid transparent;
 }
 
 .jumbotron {

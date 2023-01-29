@@ -1,7 +1,7 @@
 $(document).ready(function() {
 //-- START of document.ready
 
-//-- Get time to display in jumbotron
+//-- Get time to display in jumbotron and schedule header
 const timeCurrentPElQ = document.querySelector("#currentDay");
 
 setInterval(function() {
@@ -20,6 +20,8 @@ $('#todayDate').text(moment(today).format("Do MMM YYYY"));
 var timeSlotArray = ["t07", "t08", "t09", "t10", "t11", "t12", "t13", "t14", "t15", "t16", "t17", "t18", "t19"];
 
 userTask = "time to sleep";
+
+$("8")
 
 // for (let i = 0; i < timeSlotArray.length; i++) {
 //    eval('var ' + timeSlotArray[i] + '= "' + userTask +'";');

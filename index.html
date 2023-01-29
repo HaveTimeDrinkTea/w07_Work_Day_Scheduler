@@ -39,12 +39,23 @@
          <div class="row">
             <!-- start of left column -->
             <div class="col-sm-12 col-md-2">
-               <div class="mindful" id="quoteOfDay">
+               <!-- card 1 -->
+               <div class="card">
+                  <div class="card-body mindful">
+                     <span id="quoteOfDay">
+                     </span>
+                  </div>
+                  <p class="sideText quotePerson alignCenter">said by someone nice...
+                  </p>
                </div>
-               <p class="sideText quotePerson alignRight">said by someone nice...
-               </p>
-               <p class="sideText">small calendar and post it note here
-               </p>               
+               <!-- card 2 -->
+               <div class="card">
+                  <div class="card-body bubble">
+                     <span id="bubble">small calendar and post it note here
+                     </span>
+                  </div>
+               </div>
+               <!-- end of card 2 -->
             </div>
             <!-- end of left column -->
             <!-- start of right column -->
@@ -65,9 +76,14 @@
                         <td><i class="fa fa-floppy-o" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i> | <i class="fa fa-square-o" aria-hidden="true"></i> | <i class="fa fa-check-square-o" aria-hidden="true"></i></td>
                      </tr>
                      <tr>
+                        <form action="" id="formT08">
                         <th scope="row" id="8">0800h</th>
-                        <td>Keytar eu aliqua hot chicken wolf shaman. </td>
-                        <td>save or remove</td>
+                        <td>
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="t08Text"></label><textarea id="w3review" name="t08Text" form="formT08" placeholder="blah" rows="1"></textarea>
+                           <span id="t08Entry">Keytar eu aliqua hot chicken wolf shaman. </span>
+                           </td>
+                        <td><button><i class="fa fa-floppy-o" aria-hidden="true"></i></button> <button><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                        </form>
                      </tr>  
                      <tr>
                         <th scope="row" id="9">0900h</th>
