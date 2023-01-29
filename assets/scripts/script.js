@@ -2,11 +2,12 @@ $(document).ready(function() {
 //-- START of document.ready
 
 //-- Get time to display in jumbotron and schedule header
-const timeCurrentPElQ = document.querySelector("#currentDay");
+
+var thisMoment = new Date();
 
 setInterval(function() {
-   let now = moment().format("ddd, Do MMM YYYY HH:mm:ss") ;
-   timeCurrentPElQ.textContent = now;
+   let now = moment(thisMoment).format("ddd, Do MMM YYYY HH:mm:ss") ;
+   $("#currentDay").text(now);
 }, 1000);
 
 var today = new Date();
@@ -16,6 +17,40 @@ $('#todayDate').text(moment(today).format("Do MMM YYYY"));
 
 
 //-- Get the array of time slots
+
+let currentHourTest = parseInt(thisMoment.getHours());
+console.log("currentHourTest:", currentHourTest);
+
+let currentHour = 9;
+
+let rowTime = 8;
+
+// color each hourly slot according to time of day
+$("#daySchedule").each(function() {
+
+
+
+});
+
+if ((currentHour > rowTime)) {
+   $("#t08Row").toggleClass("past");
+
+} else if (currentHour === rowTime) {
+   $("#t08Row").toggleClass("now");
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var timeSlotArray = ["t07", "t08", "t09", "t10", "t11", "t12", "t13", "t14", "t15", "t16", "t17", "t18", "t19"];
 
