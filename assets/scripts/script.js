@@ -10,20 +10,22 @@ setInterval(function() {
    $("#currentDay").text(now);
 }, 1000);
 
-var today = new Date();
-console.log(today.toLocaleDateString());
+// console.log(today.toLocaleDateString());
 
-$('#todayDate').text(moment(today).format("Do MMM YYYY"));
+$('#todayDate').text(moment(thisMoment).format("Do MMM YYYY"));
 
 
-//-- Get the array of time slots
+//-- Get current date and hour
 
-let currentHour = parseInt(thisMoment.getHours());
-console.log("currentHourTest:", currentHour);
+// let currentHour = parseInt(thisMoment.getHours());
+let currentHour = 11;
+let currentDate = moment(thisMoment).format("DD-MMM-YYYY");
+console.log("currentDate:", currentDate);
 
-// color each hourly slot according to time of day
+
+//-- Colour each hourly slot according to time of day
 $("#daySchedule > tr").each(function() {
-
+   
    let slotHourString = $(this).children().attr("id").substring(0,2);
    let slotHour = parseInt(slotHourString);
    // console.log("slot ID", $(this).children().attr("id"));
@@ -38,7 +40,80 @@ $("#daySchedule > tr").each(function() {
    } else if (currentHour === slotHour) {
       $(this).toggleClass("now");
    };
-});
+
+   
+}); //-- end of for each function to set background color
+
+
+//-- set listener on save button to capture user text entry
+
+$(".btnSave").on("click", function () {
+   // Get nearby values of the description in JQuery
+   
+   
+   let userEntryArray = JSON.parse(localStorage.getItem("userEntryArray"));
+   
+   if (userEntryArray === null) {
+      userEntryArray = [];
+   };
+
+   let userTextInput = $(this).parent().siblings().children("#userTextInput").val();
+   console.log("userTextInput:", userTextInput);
+   let slotHourString = $(this).parent().parent().attr("id").substring(1,3);
+   
+   userEntryArray.push({
+      entryDate: currentDate,
+      timeSlot: slotHourString,
+      userText: userTextInput,
+   });
+
+   // Save text in local storage
+   localStorage.setItem("userEntryArray", JSON.stringify(userEntryArray));
+})
+
+
+   // let numTimeSlots = 20;
+   // let slotHourString = "";
+
+   // for(let i = currentHour; i < numTimeSlots; i++) {
+   //    if (i < 10 ) {
+   //       slotHourString = "0" + i;
+   //    } else {
+   //       slotHourString = "" + i;
+   //    };
+   //    setUserEntry();
+  
+   // };
+
+      
+   //    function setUserEntry() {   
+   //    $("#saveT" + slotHourString).on("click", function() {
+   //       let userEntryArray = JSON.parse(localStorage.getItem("userEntryArray"));
+      
+   //       if (userEntryArray === null) {
+   //       userEntryArray = [];
+   //       };
+      
+   //       let userTextInput = $("#t" + slotHourString+ "TextInput").val();
+   //       console.log("userTextInput:", userTextInput);
+      
+   //       userEntryArray.push({
+   //          entryDate: currentDate,
+   //          timeSlot: currentHour,
+   //          userText: userTextInput,
+   //       });
+      
+   //       console.log("userEntryArray:", userEntryArray)
+      
+   //       localStorage.setItem("userEntryArray", JSON.stringify(userEntryArray));
+      
+   //    }); //-- end of onclick listener
+   // }; //-- end of function setUserEntry
+
+
+
+
+
 
 // if ((currentHour > rowTime)) {
 //    $("#t08Row").toggleClass("past");
