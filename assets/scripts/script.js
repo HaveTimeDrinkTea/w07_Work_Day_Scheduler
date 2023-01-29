@@ -18,28 +18,34 @@ $('#todayDate').text(moment(today).format("Do MMM YYYY"));
 
 //-- Get the array of time slots
 
-let currentHourTest = parseInt(thisMoment.getHours());
-console.log("currentHourTest:", currentHourTest);
-
-let currentHour = 9;
-
-let rowTime = 8;
+let currentHour = parseInt(thisMoment.getHours());
+console.log("currentHourTest:", currentHour);
 
 // color each hourly slot according to time of day
-$("#daySchedule").each(function() {
+$("#daySchedule > tr").each(function() {
 
+   let slotHourString = $(this).children().attr("id").substring(0,2);
+   let slotHour = parseInt(slotHourString);
+   // console.log("slot ID", $(this).children().attr("id"));
+   // console.log("slotHour number:", slotHour);
 
-
+   if ((currentHour > slotHour)) {
+      $(this).toggleClass("past");
+      $(this).children("td").children("textarea").addClass("hide");
+      $(this).children("td").children("button").addClass("hide");
+      $(this).children("td").children("i").addClass("hide");
+   
+   } else if (currentHour === slotHour) {
+      $(this).toggleClass("now");
+   };
 });
 
-if ((currentHour > rowTime)) {
-   $("#t08Row").toggleClass("past");
+// if ((currentHour > rowTime)) {
+//    $("#t08Row").toggleClass("past");
 
-} else if (currentHour === rowTime) {
-   $("#t08Row").toggleClass("now");
-};
-
-
+// } else if (currentHour === rowTime) {
+//    $("#t08Row").toggleClass("now");
+// };
 
 
 
@@ -52,25 +58,27 @@ if ((currentHour > rowTime)) {
 
 
 
-var timeSlotArray = ["t07", "t08", "t09", "t10", "t11", "t12", "t13", "t14", "t15", "t16", "t17", "t18", "t19"];
 
-userTask = "time to sleep";
 
-$("8")
+// var timeSlotArray = ["t07", "t08", "t09", "t10", "t11", "t12", "t13", "t14", "t15", "t16", "t17", "t18", "t19"];
+
+// userTask = "time to sleep";
+
+// $("8")
 
 // for (let i = 0; i < timeSlotArray.length; i++) {
 //    eval('var ' + timeSlotArray[i] + '= "' + userTask +'";');
 // }
 
-var timeSlotArrayIndex;
+// var timeSlotArrayIndex;
 
-var hrNum = 11;
+// var hrNum = 11;
 
-timeSlotArrayIndex = hrNum - 7;
+// timeSlotArrayIndex = hrNum - 7;
 
-eval('var ' + timeSlotArray[timeSlotArrayIndex] + '= "' + userTask +'";');
+// eval('var ' + timeSlotArray[timeSlotArrayIndex] + '= "' + userTask +'";');
 
-console.log("t11 is:", t11);
+// console.log("t11 is:", t11);
 
 // function createTimeSlot(hrNum, userTask) {
 //    let tPrefix = "t"
@@ -99,6 +107,11 @@ console.log("t11 is:", t11);
 //       t19: ,
 //    },
 // ];
+
+
+
+
+
 
 
 

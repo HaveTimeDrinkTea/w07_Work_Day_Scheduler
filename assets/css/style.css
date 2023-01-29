@@ -70,6 +70,7 @@ button:active {
 }
 
 
+
 /* header and footer  */
 
 .jumbotron {
@@ -285,7 +286,13 @@ td {
   text-align: left;
 }
 
+.hide {
+  display: none; 
+}
 
+.visible {
+  display: inline; 
+}
 
 textarea {
   background: transparent;
