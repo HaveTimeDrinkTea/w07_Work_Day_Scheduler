@@ -39,6 +39,7 @@ function getLocalStorage() {
 getLocalStorage();
 
 //-- Colour each hourly slot according to time of day
+function displayTimeSlots() {
 $("#daySchedule > tr").each(function() {
    
    let slotHourString = $(this).children().attr("id").substring(0,2);
@@ -68,6 +69,9 @@ $("#daySchedule > tr").each(function() {
 
    
 }); //-- end of for each function to set background color
+};
+
+displayTimeSlots() 
 
 
 //-- set listener on save button to capture user text entry
@@ -90,6 +94,8 @@ $(".btnSave").on("click", function () {
 
    // Save text in local storage
    localStorage.setItem("userEntryArray", JSON.stringify(userEntryArray));
+   getLocalStorage();
+   displayTimeSlots();
 });
 
 
