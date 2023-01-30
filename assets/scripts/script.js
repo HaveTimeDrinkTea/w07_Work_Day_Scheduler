@@ -144,29 +144,29 @@ $(".btnSave").on("click", function(){
 
 
 
-function renderUserEntryTest(slotHourStringID) {
+// function renderUserEntryTest(slotHourStringID) {
 
-   getLocalStorage();
+//    getLocalStorage();
 
-   console.log("inside renderUserEntry() and the slotHourStringID is", slotHourStringID);
+//    console.log("inside renderUserEntry() and the slotHourStringID is", slotHourStringID);
 
-   timeSlotEntryStored = userEntryStored.find(element => (element.timeSlot === slotHourStringID));
+//    timeSlotEntryStored = userEntryStored.find(element => (element.timeSlot === slotHourStringID));
 
    
-   if (timeSlotEntryStored != undefined) { 
-   console.log("timeSlotEntry for", slotHourDisplay + ":", timeSlotEntryStored);
-   console.log("selected text:", timeSlotEntryStored.userText);
+//    if (timeSlotEntryStored != undefined) { 
+//    console.log("timeSlotEntry for", slotHourDisplay + ":", timeSlotEntryStored);
+//    console.log("selected text:", timeSlotEntryStored.userText);
 
-   let userStoredTimeSlot = timeSlotEntryStored.timeSlot;
+//    let userStoredTimeSlot = timeSlotEntryStored.timeSlot;
 
-   console.log("storedTimeSlot:", parseInt(timeSlotEntryStored.timeSlot));
+//    console.log("storedTimeSlot:", parseInt(timeSlotEntryStored.timeSlot));
 
-   $("#t"+ userStoredTimeSlot + "Entry").html("<i class='fa fa-thumb-tack' aria-hidden='true'></i> " + timeSlotEntryStored.userText);
-   } else {
-      console.log("I'm here in display!");
-   };
+//    $("#t"+ userStoredTimeSlot + "Entry").html("<i class='fa fa-thumb-tack' aria-hidden='true'></i> " + timeSlotEntryStored.userText);
+//    } else {
+//       console.log("I'm here in display!");
+//    };
 
-}
+// }
 
 
 
