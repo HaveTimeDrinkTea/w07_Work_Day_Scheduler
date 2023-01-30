@@ -33,6 +33,14 @@ var userEntryStored;
 let textToDisplay;
 
 
+let EntryStoredTodayOnly;
+
+//-- 
+function init() {
+   renderUserEntry(slotHourStringID);
+};
+
+
 //-- get any stored data in local storage
 
 function getLocalStorage() {
@@ -143,30 +151,31 @@ $(".btnSave").on("click", function(){
 });
 
 
-
-// function renderUserEntryTest(slotHourStringID) {
-
-//    getLocalStorage();
-
-//    console.log("inside renderUserEntry() and the slotHourStringID is", slotHourStringID);
-
-//    timeSlotEntryStored = userEntryStored.find(element => (element.timeSlot === slotHourStringID));
-
+$("#btnDeletePast").on("click", function(){
    
-//    if (timeSlotEntryStored != undefined) { 
-//    console.log("timeSlotEntry for", slotHourDisplay + ":", timeSlotEntryStored);
-//    console.log("selected text:", timeSlotEntryStored.userText);
+   console.log(currentDate);
 
-//    let userStoredTimeSlot = timeSlotEntryStored.timeSlot;
+   getLocalStorage();
 
-//    console.log("storedTimeSlot:", parseInt(timeSlotEntryStored.timeSlot));
+   EntryStoredTodayOnly = userEntryStored.filter(element => (
+      element.entryDate >= currentDate));
+      
+      
+   console.log("EntryStoredTodayOnly:", EntryStoredTodayOnly);
 
-//    $("#t"+ userStoredTimeSlot + "Entry").html("<i class='fa fa-thumb-tack' aria-hidden='true'></i> " + timeSlotEntryStored.userText);
-//    } else {
-//       console.log("I'm here in display!");
-//    };
+     // Save text in local storage
+   localStorage.setItem("userEntryArray", JSON.stringify(EntryStoredTodayOnly));
+   location.reload();
+});
 
-// }
+$("#btnAddMockData").on("click", function() {
+   
+   console.log ("Mock Data Array for testing is:", mockDataArray);
+   // Save text in local storage
+   localStorage.setItem("userEntryArray", JSON.stringify(mockDataArray));
+   location.reload();   
+});
+
 
 
 
