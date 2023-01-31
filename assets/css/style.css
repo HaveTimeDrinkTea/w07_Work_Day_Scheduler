@@ -441,4 +441,11 @@ textarea::placeholder {
   color: var(--colorPurple);
   font-style: italic;
   font-weight: bold;
+  background-color: var(--colorLemon);
+  padding: 5px;
+  margin: 10px auto;
+  max-width: 50%;
+  border-radius: 10px;
+  line-height: 1.2rem;
+  text-align: center;
 }
