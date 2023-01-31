@@ -4,9 +4,7 @@
 
 This project is part of the Frontend Dev Bootcamp course challenge for the seventh week "Third-Party APIs". 
 
-It requires us to use third-party APIs such as moment.js, JQuery and its UI together JScript objects, client-side storage, browser events to build single day schedule planner. This calendar application should allow a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery. We are also expected Moment.js library to work with date and time. 
-
-The MCQ quiz should present the questions to the user. When the user clicks on one of the multiple choice answers, the quiz should check store the results and move on to the next question.  If the user give a wrong answer then the quiz time is to be reduced as a penalty. 
+It requires us to use third-party APIs such as moment.js, JQuery and its UI together JScript objects, client-side storage, browser events to build single day schedule planner. This calendar application should allow a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery. Moment.js library is used for date and time display and manipulations. 
 
 The JScript will produce the output dyanmically to the webpage pages as part of the starter code provided. I've tried to group repeatedly called Jscript codes into modular functions where possible.
 
@@ -29,10 +27,8 @@ The JScript will produce the output dyanmically to the webpage pages as part of 
 
 ### Further Improvements
 
-* To allow users to input the number of questions to be included in a quiz and / or the amount of time allowed or each question. This can be implemented using FORM and event listeners in the homepage. 
-* To set up an even larger bank of questions or categories of questions.
-* Add a quit button to quit the quiz at any time.
-* Add a Spaced Repetition System learning mechanism to this quiz application. 
+* To allow users to delete or amend a previously entry. This can be done by adding an ID to each entry (and stored in local storage)
+* To allow users to enter text for the two post-it notes in the side bar. This "Post-It note" functionality should allow user to amend or delete any notes.  These notes will be stored in the localstorage.
 
 
 
