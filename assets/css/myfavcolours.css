@@ -33,6 +33,7 @@
     --colorOrange: rgba(216, 95, 38, 1);
     --colorOrange50: rgba(216, 95, 38, 0.5);
     --colorOrange70: rgba(216, 95, 38, 0.7);
+    --colorOrangeBright: rgb(250, 80, 2);
     --colorBrownLight: #62523a;
     --colorBrownDark: rgba(84, 64, 44, 1);
     --colorBrownDark50: rgba(84, 64, 44, 0.5);
@@ -42,6 +43,7 @@
     --colorBrownMonkey50: rgba(129, 95, 37, 0.5); 
     --colorCyanDark: rgba(20, 70, 86, 1);
     --colorCyanDark50: rgba(20, 70, 86, 0.5);
+    --colorViolet: #7166c2;
     --colorPurple: #611bbc;
     --colorPurpleDark: #5318a0;
     --bgColor:#607d8b;

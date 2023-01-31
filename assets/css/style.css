@@ -37,6 +37,13 @@ h2 {
   color: var(--colorWhite);
 }
 
+h3 {
+  font-size: 1.3rem;
+  text-align: center;
+  color: var(--colorWhite);
+}
+
+
 
 /* buttons */
 button {
@@ -79,6 +86,7 @@ button:active {
 }
 
 .header, 
+.footer2,
 .footer {
   text-align: center;
   padding: 5px;
@@ -102,8 +110,16 @@ button:active {
   font-size: 1rem;
 }
 
+.footer2 {
+  margin-top: 30px; 
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: var(--colorRed);
+  font-size: 1rem;
+}
 
 header::after,
+footer2::after,
 footer::after {
   content: " ";
   display: block;
@@ -196,7 +212,7 @@ ul#footerNav li a.active:hover {
 }
 
 .mindful {
-	background: var(--colorOrange);
+	background: var(--colorMustard);
 }
 
 .mindful:after {
@@ -207,15 +223,33 @@ ul#footerNav li a.active:hover {
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
-	border-top-color: var(--colorOrange);
+	border-top-color: var(--colorMustard);
 	border-bottom: 0;
 	border-right: 0;
 	margin-left: -10px;
 	margin-bottom: -20px;
 }
 
-.bubble {
+.bubble1 {
 	background: var(--colorPink);
+}
+
+
+.bubble2 {
+	background: var(--colorTealMedium);
+}
+
+.bubble3 {
+	background: var(--colorViolet);
+}
+
+.bubbleDelete {
+	background: var(--colorRed);
+}
+
+.smallNote {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .alignRight {
@@ -267,8 +301,14 @@ table {
 
 caption {
   color: var(--colorWhite);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  background-color: var(--colorOrangeBright);
+  border-top: solid 0.3rem var(--colorWhite) !important;
+  border-left: solid 0.3rem var(--colorWhite) !important;
+  border-right: solid 0.3rem var(--colorWhite) !important;
+  border-bottom: 0;
 }
+
 thead, tbody {
   color: var(--colorWhite);
   font-size: 1rem;

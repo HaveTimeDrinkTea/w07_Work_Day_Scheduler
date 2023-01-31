@@ -1,5 +1,7 @@
 $(document).ready(function() {
 //-- START of document.ready
+//--====================== 
+//--====================== 
 
 //-- Get time to display in jumbotron and schedule header
 
@@ -12,13 +14,31 @@ setInterval(function() {
 
 // console.log(today.toLocaleDateString());
 
-$('#todayDate').text(moment(thisMoment).format("Do MMM YYYY"));
+$('#todayDate').text("BRAND NEW FABULOUS " + moment(thisMoment).format("Do MMMM YYYY"));
 
 
 //-- Get current date and hour
 
-let currentHour = parseInt(thisMoment.getHours());
-// let currentHour = 15;
+let currentHour;
+
+//-- parameter to set current hour to a fixed number 12 
+//-- see listener function on button #btnAddMockTime
+
+let getCurrentHour = localStorage.getItem("currentHour");
+
+console.log("on page load, the getCurrentHour is:", getCurrentHour); 
+
+if (getCurrentHour === "12") {
+   currentHour = 12;
+} else {
+   currentHour = parseInt(thisMoment.getHours());
+};
+
+console.log("after checking isUseMock, the currentHour is:", currentHour);
+
+
+
+//-- get the current date
 let currentDate = moment(thisMoment).format("DD-MMM-YYYY");
 console.log("currentDate:", currentDate);
 
@@ -30,7 +50,15 @@ let slotEntryStoredByID;
 var userEntryStored;
 
 
-let textToDisplay;
+let textToDisplay =[];
+
+
+let EntryStoredTodayOnly;
+
+//-- 
+function init() {
+   renderUserEntry(slotHourStringID);
+};
 
 
 //-- get any stored data in local storage
@@ -59,10 +87,6 @@ function renderUserEntry(slotHourStringID) {
 
    if (slotEntryStoredByID != undefined) { 
 
-      // let userStoredTimeSlot = slotEntryStored.timeSlot;
-      
-      // console.log("storedTimeSlot:", parseInt(slotEntryStored.timeSlot));
-
       for (let i = 0; i < slotEntryStoredByID.length; i++) {
          console.log("SlotEntry for", slotHourDisplay + ":", slotEntryStoredByID);
          console.log("selected text:", slotEntryStoredByID.userText);
@@ -78,7 +102,9 @@ function renderUserEntry(slotHourStringID) {
    };
 
 }
+//-- end of renderUserEntry(slotHourStringID)
 
+//-- start of rendering each row background colour
 
 $("#daySchedule > tr").each(function() {
       
@@ -108,9 +134,6 @@ $("#daySchedule > tr").each(function() {
 
 //-- set listener on save button to capture user text entry
 
-// function handleSaveBtn() {
-
-// }
 
 $(".btnSave").on("click", function(){
 
@@ -143,32 +166,63 @@ $(".btnSave").on("click", function(){
 });
 
 
+$("#btnDeletePast").on("click", function(){
+   
+   console.log(currentDate);
 
-// function renderUserEntryTest(slotHourStringID) {
+   getLocalStorage();
 
-//    getLocalStorage();
+   EntryStoredTodayOnly = userEntryStored.filter(element => (
+      element.entryDate >= currentDate));
+      
+      
+   console.log("EntryStoredTodayOnly:", EntryStoredTodayOnly);
 
-//    console.log("inside renderUserEntry() and the slotHourStringID is", slotHourStringID);
+     // Save text in local storage
+   localStorage.setItem("userEntryArray", JSON.stringify(EntryStoredTodayOnly));
+   location.reload();
+});
 
-//    timeSlotEntryStored = userEntryStored.find(element => (element.timeSlot === slotHourStringID));
+
+//-----------------------------------
+//-- Button listeners for creating mock data and set time slot
+//-----------------------------------
+
+$("#btnAddMockData").on("click", function() {
+   
+   console.log ("Mock Data Array for testing is:", mockDataArray);
+   // Save text in local storage
+   localStorage.setItem("userEntryArray", JSON.stringify(mockDataArray));
+   location.reload();   
+});
+
+
+$("#btnAddMockTime").on("click", function() {
+   
+   localStorage.getItem("currentHour");
+
+   if (getCurrentHour === "12") {
+      localStorage.removeItem("currentHour");
+   } else {
+      localStorage.setItem("currentHour", "12");
+   };
+   location.reload();  
+   // console.log ("isUseMock before: ", isUseMock);
+   // // flip the isUseMock flag
+   // isUseMock = localStorage.getItem("isUseMock");
+   // if (isUseMock === null) {
+   //    isUseMock = !isUseMock;
+   //    localStorage.setItem("isUseMock", isUseMock);
+   // } else {
+   //    localStorage.removeItem("isUseMock");
+   // };
+   // console.log ("isUseMock after: ", isUseMock);
+   // location.reload();  
+});
+
 
    
-//    if (timeSlotEntryStored != undefined) { 
-//    console.log("timeSlotEntry for", slotHourDisplay + ":", timeSlotEntryStored);
-//    console.log("selected text:", timeSlotEntryStored.userText);
-
-//    let userStoredTimeSlot = timeSlotEntryStored.timeSlot;
-
-//    console.log("storedTimeSlot:", parseInt(timeSlotEntryStored.timeSlot));
-
-//    $("#t"+ userStoredTimeSlot + "Entry").html("<i class='fa fa-thumb-tack' aria-hidden='true'></i> " + timeSlotEntryStored.userText);
-//    } else {
-//       console.log("I'm here in display!");
-//    };
-
-// }
-
-
-
+//--====================== 
+//--======================  
 //-- END of document.ready
 });   

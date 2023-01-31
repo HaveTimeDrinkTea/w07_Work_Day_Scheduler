@@ -50,12 +50,43 @@
                </div>
                <!-- card 2 -->
                <div class="card">
-                  <div class="card-body bubble">
-                     <span id="bubble">small calendar and post it note here
+                  <div class="card-body bubble bubble1">
+                     <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                     <span id="bubble">Plants need water or else they will have to go to plant heaven!
                      </span>
                   </div>
                </div>
                <!-- end of card 2 -->
+               <!-- card 3 -->
+               <div class="card">
+                  <div class="card-body bubble bubble2">
+                     <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                     <span id="bubble">And Like plants, human needs water too! How else are you going to get skin as dewy as those boys (ahem, men) in BTS?
+                     </span>
+                  </div>
+               </div>
+               <!-- end of card 3 -->            
+               <!-- card 3 -->
+               <!-- <div class="card">
+                  <div class="card-body bubble bubble3">
+                     <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                     <span id="bubble">And Like plants, human needs water too! How else are you going to get skin as dewy as those boys (ahem, men) in BTS?
+                     </span>
+                  </div>
+               </div> -->
+               <!-- end of card 3 -->                     
+               <!-- last card Delete Yesterday -->
+               <div class="card">
+                  <div class="card-body bubble bubbleDelete">
+                     <i class="fa fa-minus-square" aria-hidden="true"></i>
+                     <span id="bubble">Letting Go of Yesterdays ...
+                     </span><br><br>
+                  <button id="btnDeletePast"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                  <br><br>
+                  <span class="smallNote"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>  "Letting go" actions cannot be undone!</span>
+                  </div>
+               </div>
+               <!-- end of last card -->               
             </div>
             <!-- end of left column -->
             <!-- start of right column -->
@@ -64,17 +95,17 @@
                   <caption id="todayDate" style="caption-side:top; text-align:center;"></caption>
                   <thead class="bg-info text-white">
                      <tr>
-                        <th scope="col">col1</th>
-                        <th scope="col">col2</th>
-                        <th scope="col">col3</th>
+                        <th scope="col">Hour</th>
+                        <th scope="col">Exciting Activities</th>
+                        <th scope="col">Action</th>
                      </tr>
                   </thead>
                   <tbody id="daySchedule">
                      <tr id="t07Row">
                         <th scope="row" id="7">0700h</th>
                         <td>
-                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="blah" rows="1" ></textarea>
-                           <span id="t07Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                           <span id="t07Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span> <br><br>                          
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="something exciting!" rows="1" ></textarea>
                         </td>
                         <td>
                            <button class="btnSave"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
@@ -86,8 +117,8 @@
                            0800h
                         </th>
                         <td>
-                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="blah" rows="1" ></textarea>
-                           <span id="t08Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                           <span id="t08Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span> <br><br>                          
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="something exciting!" rows="1" ></textarea>
                         </td>
                         <td>
                            <button class="btnSave"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
@@ -97,8 +128,8 @@
                      <tr id="t09Row">
                         <th scope="row" id="9">0900h</th>
                         <td>
-                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="blah" rows="1" ></textarea>
-                           <span id="t09Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                           <span id="t09Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span> <br><br>                          
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="something exciting!" rows="1" ></textarea>
                         </td>
                         <td>
                            <button class="btnSave"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
@@ -108,19 +139,19 @@
                      <tr id="t10Row">
                         <th scope="row" id="10">1000h</th>
                         <td>
-                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="blah" rows="1" ></textarea>
-                           <span id="t10Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                           <span id="t10Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span> <br><br>                          
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="something exciting!" rows="1" ></textarea>
                         </td>
                         <td>
                            <button id="btnSave"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
-                           <button id="trash"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                           <button id="btnDelete"><i class="fa fa-trash" aria-hidden="true"></i></button>
                         </td>
                      </tr> 
                      <tr id="t11Row">
                         <th scope="row" id="11">1100h</th>
                         <td>
-                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="blah" rows="1" ></textarea>
-                           <span id="t11Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                           <span id="t11Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span> <br><br>                          
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="something exciting!" rows="1" ></textarea>
                         </td>
                         <td>
                            <button class="btnSave"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
@@ -130,8 +161,8 @@
                      <tr id="t12Row">
                         <th scope="row" id="12">1200h</th>
                         <td>
-                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="blah" rows="1" ></textarea>
-                           <span id="t12Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                           <span id="t12Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span> <br><br>                          
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="something exciting!" rows="1" ></textarea>
                         </td>
                         <td>
                            <button class="btnSave"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
@@ -141,8 +172,8 @@
                      <tr id="t13Row">
                         <th scope="row" id="13">1300h</th>
                         <td>
-                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="blah" rows="1" ></textarea>
-                           <span id="t13Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                           <span id="t13Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span> <br><br>                          
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="something exciting!" rows="1" ></textarea>
                         </td>
                         <td>
                            <button class="btnSave"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
@@ -152,8 +183,8 @@
                      <tr id="t14Row">
                         <th scope="row" id="14">1400h</th>
                         <td>
-                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="blah" rows="1" ></textarea>
-                           <span id="t14Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                           <span id="t14Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span> <br><br>                           
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="something exciting!" rows="1" ></textarea>
                         </td>
                         <td>
                            <button class="btnSave"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
@@ -163,8 +194,8 @@
                      <tr id="t15Row">
                         <th scope="row" id="15">1500h</th>
                         <td>
-                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="blah" rows="1" ></textarea>
-                           <span id="t15Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                           <span id="t15Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span> <br><br>                           
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="something exciting!" rows="1" ></textarea>
                         </td>
                         <td>
                            <button class="btnSave"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
@@ -174,8 +205,8 @@
                      <tr id="t16Row">
                         <th scope="row" id="16">1600h</th>
                         <td>
-                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="blah" rows="1" ></textarea>
-                           <span id="t16Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                           <span id="t16Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span> <br><br>                          
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="something exciting!" rows="1" ></textarea>
                         </td>
                         <td>
                            <button class="btnSave"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
@@ -185,8 +216,8 @@
                      <tr id="t17Row">
                         <th scope="row" id="17">1700h</th>
                         <td>
-                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="blah" rows="1" ></textarea>
-                           <span id="t17Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                           <span id="t17Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span> <br><br>                         
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="something exciting!" rows="1" ></textarea>
                         </td>
                         <td>
                            <button class="btnSave"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
@@ -196,8 +227,8 @@
                      <tr id="t18Row">
                         <th scope="row" id="18">1800h</th>
                         <td>
-                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="blah" rows="1" ></textarea>
-                           <span id="t18Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                           <span id="t18Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span> <br><br>                           
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="something exciting!" rows="1" ></textarea>
                         </td>
                         <td>
                            <button class="btnSave"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
@@ -207,8 +238,8 @@
                      <tr id="t19Row">
                         <th scope="row" id="19">1900h</th>
                         <td>
-                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="blah" rows="1" ></textarea>
-                           <span id="t19Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                           <span id="t19Entry"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span><br><br>                            
+                           <i class='fa fa-pencil' aria-hidden='true'></i><label for="userTextInput"></label><textarea id="userTextInput" name="userTextInput" placeholder="something exciting!" rows="1" ></textarea>
                         </td>
                         <td>
                            <button class="btnSave"><i class="fa fa-floppy-o" aria-hidden="true"></i></button> 
@@ -248,6 +279,18 @@
             </div>
          </div>
       </div>
+      <div class="footer2">
+         <h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> FOR TESTING PURPOSES (not [really] part of this app) <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></h3>
+         <div class="footerTags">
+            Click the <i class="fa fa-database" aria-hidden="true"></i> button to create test data for this app
+         </div>
+         <button id="btnAddMockData" style="font-size: 1.8rem;"><i class="fa fa-database" aria-hidden="true"></i></button>
+
+         <div class="footerTags">
+            Click the <i class="fa fa-clock-o" aria-hidden="true"></i> button to toggle between local machine time or a mock time of 12 noon.
+         </div>
+         <button id="btnAddMockTime" style="font-size: 1.8rem;"><i class="fa fa-clock-o" aria-hidden="true"></i></button>
+      </div>
    </footer>
 
 <!-- =================================================-->   
@@ -273,6 +316,6 @@
    <!-- My own script  -->
    <script src="assets/scripts/script.js"></script>
    <script src="assets/scripts/quotes.js"></script>
-
+   <script src="assets/scripts/mockupdata.js"></script>
 </body>
 </html>
