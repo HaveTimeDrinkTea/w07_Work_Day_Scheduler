@@ -120,7 +120,7 @@ MIT License
 ## Features
 
 ### Main Features
-A style online schedule planner for the current day that
+A styled online schedule planner for the current day that
 * uses bootstrap v4.6 as a page template
 * display the current (local machine) date and time in the jumbotron
 * Hourly time slots for scheduling events during office hours. This app allows user to input entries for 13 hourly time slots from 0700h to 1900h.
