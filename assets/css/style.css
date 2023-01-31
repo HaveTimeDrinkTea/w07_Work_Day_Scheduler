@@ -212,7 +212,7 @@ ul#footerNav li a.active:hover {
 }
 
 .mindful {
-	background: var(--colorOrange);
+	background: var(--colorMustard);
 }
 
 .mindful:after {
@@ -223,7 +223,7 @@ ul#footerNav li a.active:hover {
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
-	border-top-color: var(--colorOrange);
+	border-top-color: var(--colorMustard);
 	border-bottom: 0;
 	border-right: 0;
 	margin-left: -10px;
@@ -240,7 +240,11 @@ ul#footerNav li a.active:hover {
 }
 
 .bubble3 {
-	background: var(--colorMustard);
+	background: var(--colorViolet);
+}
+
+.bubbleDelete {
+	background: var(--colorRed);
 }
 
 .smallNote {
@@ -297,8 +301,14 @@ table {
 
 caption {
   color: var(--colorWhite);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  background-color: var(--colorOrangeBright);
+  border-top: solid 0.3rem var(--colorWhite) !important;
+  border-left: solid 0.3rem var(--colorWhite) !important;
+  border-right: solid 0.3rem var(--colorWhite) !important;
+  border-bottom: 0;
 }
+
 thead, tbody {
   color: var(--colorWhite);
   font-size: 1rem;
