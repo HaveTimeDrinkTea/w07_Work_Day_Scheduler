@@ -156,7 +156,7 @@ $(document).ready(function() {
       if (!userTextInput) {
          console.log("userTextInput during null check:", userTextInput);
          let errorMsg = $("<div>");
-         errorMsg.addClass("msgError").html("<br> <i class='fa fa-bullhorn' aria-hidden='true'></i> Nothing to save here, my darling! <i class='fa fa-meh-o' aria-hidden='true'></i> <br> (click to hide me!)");
+         errorMsg.addClass("msgError").html("<i class='fa fa-bullhorn' aria-hidden='true'></i> <br> Nothing to save here, my darling!  <br> (click to <i class='fa fa-trash' aria-hidden='true'></i> me!)");
          $(this).after(errorMsg);
          
          $(".msgError").on('click', function(e) { //
@@ -248,6 +248,11 @@ $(document).ready(function() {
       // console.log ("isUseMock after: ", isUseMock);
       // location.reload();  
    });
+
+   //-- JQuery Date Picker
+   $( function() {
+      $( "#datepicker" ).datepicker();
+   } );
    
    
       
