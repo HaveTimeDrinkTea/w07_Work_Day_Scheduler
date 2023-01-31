@@ -324,7 +324,13 @@ th {
 td {
   margin: 0;
   text-align: left;
+  vertical-align: top !important;
 }
+
+.hourlyEntry {
+  vertical-align: top !important;
+}
+
 
 .hide {
   display: none; 
@@ -353,6 +359,11 @@ textarea:focus {
   outline: none;
   border-radius: 20px;
   border: 1px solid transparent;
+}
+
+textarea::placeholder {
+  color: var(--colorCharcoal70);
+  font-style: italic;
 }
 
 .jumbotron {
@@ -405,7 +416,7 @@ textarea:focus {
   background-color: var(--colorGreen);
 }
 
-.saveBtn {
+/* .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -416,7 +427,7 @@ textarea:focus {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 .msgError {
   font-size: 0.8rem;
