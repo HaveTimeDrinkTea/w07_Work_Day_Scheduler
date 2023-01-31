@@ -10,8 +10,10 @@ The JScript will produce the output dyanmically to the webpage pages as part of 
 
 ### NOTE:
  * To make it easier to evaluate this application, I have added two buttons at the bottom of the deployed page.  
-   * One button will populate the hourly slots with mock activities (to remove the mock data, please delete the localStorage of key "userEntryArray") and 
+   * One button will populate the hourly slots with mock activities (to remove the mock data, please delete the localStorage of key "userEntryArray" and then refresh the page) and 
    * the other will set the current hour to be 12 noon so that one can see the past/present/future hourly slot colouring. (to reset back to local machine time, please click the button again).
+ * The "Delete Yesterday Data" button on the side bar is meant to demonstrate the deletion of data.  The mock data mentioned above has some previous day data pre-populated for testing this function.  
+   
 
 
 ### Methodology: Pseudo Code
