@@ -137,6 +137,6 @@ A style online schedule planner for the current day that
 * A button to remove previous day entries to clear up local storage.
 * Previous days entries are not presented in the current day schedule.
 * Two buttons for testing this app (to be removed after go-live):
-  ** Button for creating test data for the app
+  ** Button for creating test data for the app. (to delete the mock data, tester will need to clear the local storage of key "userEntryArray").
   ** Button to switch between local machine time and a default time of 12 noon.
 
