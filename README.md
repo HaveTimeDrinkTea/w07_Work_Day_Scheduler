@@ -6,12 +6,11 @@ This project is part of the Frontend Dev Bootcamp course challenge for the seven
 
 It requires us to use third-party APIs such as moment.js, JQuery and its UI together JScript objects, client-side storage, browser events to build single day schedule planner. This calendar application should allow a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery. Moment.js library is used for date and time display and manipulations. 
 
-The JScript will produce the output dyanmically to the webpage pages as part of the starter code provided. I've tried to group repeatedly called Jscript codes into modular functions where possible.
+The JScript will produce the output dyanmically to the webpage pages as part of the starter code provided. I've tried to group repeatedly called JScript codes into modular functions where possible.
 
-***To make it easier to evaluate this application, I have deliberately set the quiz to take only 3 questions from a question bank of 20 and to allow a total of 18 seconds to answer them.*** The application is coded in such a way these parameters can be changed easily.
-
-
-
+ * To make it easier to evaluate this application, I have added two buttons at the bottom of the deployed page.  
+   * One button will populate the hourly slots and 
+   * the other will set the current hour to be 12 noon.
 
 
 ### Methodology: Pseudo Code
@@ -27,9 +26,10 @@ The JScript will produce the output dyanmically to the webpage pages as part of 
 
 ### Further Improvements
 
-* To allow users to delete or amend a previously entry. 
+* To allow users to delete or amend a previous entry. 
   * This can be done by generating an ID (as a counter) to each entry stored in the Local Storage everytime the Local Storage data is called. 
   * The IDs can then be inserted into Local Storage is done when every there is a new input or amendment or deletion. 
+  
 * To allow users to enter text for the two post-it notes in the side bar. This "Post-It note" functionality should allow user to amend or delete any notes.  These notes will be stored in the localstorage.
 
 
@@ -77,27 +77,29 @@ N.A.
 Screen dump of the deployed webpage:
 
 ### Web Schedule Planner
-![Deployed Webpage](assets/images/js_quiz_homepage.png)
+![Deployed Webpage](assets/images/Work_Day_Scheduler.png)
 
 
 
-### Question Page Demo 1
-![Deployed Webpage](assets/images/js_quiz_homepage_questions.png)
+### Colour-coded time slots and multiply entries per time slot
+![Deployed Webpage](assets/images/Work_Day_Scheduler1.png)
 
 
-
-### Question Page Demo 2
-![Deployed Webpage](assets/images/js_quiz_homepage_questions2.png)
-
+### User Entry in Current Hour Time Slot
+![Deployed Webpage](assets/images/Work_Day_Scheduler2.png)
 
 
-### Quiz End Page
-![Deployed Webpage](assets/images/js_quiz_homepage_quiz_end.png)
+### null User entry and error message
+![Deployed Webpage](assets/images/Work_Day_Scheduler3.png)
 
 
+### User Entry in future Hour Time Slot
+![Deployed Webpage](assets/images/Work_Day_Scheduler4.png)
 
-### Quiz High Scores League Table
-![Deployed Webpage](assets/images/js_quiz_homepage_highscore.png)
+
+### Mock Data Creation and Time Slot Setting Buttons
+![Deployed Webpage](assets/images/Work_Day_Scheduler5.png)
+
 
 
 
