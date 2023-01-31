@@ -72,7 +72,7 @@ let mockDataArray = [
    }
    ,{
       "entryDate":currentDate
-      ,"timeSlot":"16"
+      ,"timeSlot":"15"
       ,"userText":"Check the status of the London Underground to see if there are any stoppages."
    }
    ,{
