@@ -8,6 +8,7 @@ It requires us to use third-party APIs such as moment.js, JQuery and its UI toge
 
 The JScript will produce the output dyanmically to the webpage pages as part of the starter code provided. I've tried to group repeatedly called JScript codes into modular functions where possible.
 
+### NOTE:
  * To make it easier to evaluate this application, I have added two buttons at the bottom of the deployed page.  
    * One button will populate the hourly slots and 
    * the other will set the current hour to be 12 noon.
