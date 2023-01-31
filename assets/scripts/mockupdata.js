@@ -83,7 +83,12 @@ let mockDataArray = [
    ,{
       "entryDate":currentDate
       ,"timeSlot":"17"
-      ,"userText":"Remember to do Git Commits and Git Push! Got to meet the target of 200 commits by end of term!"
+      ,"userText":"Remember to do Git Commits and Git Push!"
+   }
+   ,{
+      "entryDate":currentDate
+      ,"timeSlot":"17"
+      ,"userText":"Got to meet the target of 200 commits by end of term!"
    }
    ,{
       "entryDate":currentDate

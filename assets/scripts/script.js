@@ -92,7 +92,7 @@ $(document).ready(function() {
    
          for (let i = 0; i < slotEntryStoredByID.length; i++) {
             console.log("SlotEntry for", slotHourDisplay + ":", slotEntryStoredByID);
-            console.log("selected text:", slotEntryStoredByID.userText);
+            console.log("selected text in for loop:", slotEntryStoredByID.userText);
             
             let selectedText = "<i class='fa fa-thumb-tack' aria-hidden='true'></i> " + slotEntryStoredByID[i].userText;
             if (i === 0) {
@@ -150,41 +150,47 @@ $(document).ready(function() {
    
       // get new user input in the textarea
       let userTextInput = $(this).parent().siblings().children("#userTextInput").val();
-      console.log("userTextInput:", userTextInput);
+      console.log("userTextInput BEFORE null check:", userTextInput);
 
       // check for null entry
       if (!userTextInput) {
+         console.log("userTextInput during null check:", userTextInput);
          let errorMsg = $("<div>");
          errorMsg.addClass("msgError").html("<br> <i class='fa fa-bullhorn' aria-hidden='true'></i> Nothing to save here, my darling! <i class='fa fa-meh-o' aria-hidden='true'></i> <br> (click to hide me!)");
          $(this).after(errorMsg);
          
          $(".msgError").on('click', function(e) { //
             $(".msgError").hide();
+            $(".msgError").unbind();
          });
+         userTextInput = null;
+         return;
       } else { 
+         // get the local Storage before updating it.
+         getLocalStorage();
+   
+         slotHourStringID = $(this).parent().parent().attr("id").substring(1,3);
+   
+         console.log("Get User Input: slotHourStringID:", slotHourStringID);
+   
+         let userEntryArray = userEntryStored;
+            userEntryArray.push({
+            entryDate: currentDate,
+            timeSlot: slotHourStringID,
+            userText: userTextInput,
+         });
+         
+         // clear the form input element
+         $(this).parent().siblings().children("#userTextInput").val("");
+         userTextInput = null;
+         // Save text in local storage
+         localStorage.setItem("userEntryArray", JSON.stringify(userEntryArray));
       
-      // get the local Storage before updating it.
-      getLocalStorage();
-   
-      slotHourStringID = $(this).parent().parent().attr("id").substring(1,3);
-   
-      console.log("Get User Input: slotHourStringID:", slotHourStringID);
-   
-      let userEntryArray = userEntryStored;
-      userEntryArray.push({
-         entryDate: currentDate,
-         timeSlot: slotHourStringID,
-         userText: userTextInput,
-      });
-   
-      // Save text in local storage
-      localStorage.setItem("userEntryArray", JSON.stringify(userEntryArray));
-      
-      renderUserEntry(slotHourStringID);
-      
-      // clear the form input element
-      $(this).parent().siblings().children("#userTextInput").val(" ");
+         renderUserEntry(slotHourStringID);
       };
+      
+      console.log("userTextInput AFTER null check:", userTextInput);
+      return;
    });
 
    
