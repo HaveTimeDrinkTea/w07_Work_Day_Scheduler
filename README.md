@@ -22,7 +22,7 @@ The JScript will produce the output dyanmically to the webpage pages as part of 
   * Allow user to enter text (Check for null entry)
   * Allow user to save their entry
   * present the newly saved or previously saved entries.
-* For "past" time slots, user should still be able to see their previously saved entries.  
+* For "past" time slots, user should still be able to see their previously saved entries but should not be able to add any more events.
   
 
 ### Further Improvements
