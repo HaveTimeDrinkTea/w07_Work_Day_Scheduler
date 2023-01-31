@@ -17,14 +17,15 @@ The JScript will produce the output dyanmically to the webpage pages as part of 
 
 
 ### Methodology: Pseudo Code
-* Prepare a question bank in an array of objects. Each question and answer pair is to be created as an object.
-* Ensure that questions in each quiz are not repeated
-* Prepare functions for the following features:
-  * a timer that has checks for quiz completion and will end quiz if user has not complete before the time limit.
-  * check user answer and store the score 
-  * if the user input a wrong answer, timer will be affected by reducing the time by 3 seconds.
-  * add event listeners for the start and restart quiz buttons and also when user clicked a mcq answer.
-
+* Get the current (local machine) time to present in Jumbotron and to extract the date (in DD-MMM-YYYY string) and the hour as a numeric variable
+  * the date should be inserted with the user entry
+  * the hour will be used to colour each time slots to indicate "past", "present" or "future".
+* For each time slot (if in the "present" or "future"
+  * Allow user to enter text (Check for null entry)
+  * Allow user to save their entry
+  * present the newly saved or previously saved entries.
+* For "past" time slots, user should still be able to see their previously saved entries.  
+  
 
 ### Further Improvements
 
@@ -122,7 +123,7 @@ A style online schedule planner for the current day that
 * uses bootstrap v4.6 as a page template
 * display the current (local machine) date and time in the jumbotron
 * Hourly time slots for scheduling events during office hours. This app allows user to input entries for 13 hourly time slots from 0700h to 1900h.
-* Allow users to enter events for the current or future time slots
+* Allow users to enter events for the current or future time slots. When the user attempts to save a blank event entry, the is a warning message.
 * Once the user saved an entry, it is displayed for the time slot.
 * Users can enter more than one event (subject to local storage limits)
 * Each hourly timeslot is colour coded to represent "past", "preent" and "future"
