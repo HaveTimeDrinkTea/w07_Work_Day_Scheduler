@@ -417,3 +417,10 @@ textarea:focus {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.msgError {
+  font-size: 0.8rem;
+  color: var(--colorPurple);
+  font-style: italic;
+  font-weight: bold;
+}
