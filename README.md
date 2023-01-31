@@ -10,8 +10,8 @@ The JScript will produce the output dyanmically to the webpage pages as part of 
 
 ### NOTE:
  * To make it easier to evaluate this application, I have added two buttons at the bottom of the deployed page.  
-   * One button will populate the hourly slots and 
-   * the other will set the current hour to be 12 noon.
+   * One button will populate the hourly slots with mock activities and 
+   * the other will set the current hour to be 12 noon so that one can see the past/present/future hourly slot colouring.
 
 
 ### Methodology: Pseudo Code
