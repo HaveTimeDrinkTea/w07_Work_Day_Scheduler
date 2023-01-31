@@ -118,13 +118,23 @@ MIT License
 ## Features
 
 ### Main Features
-A style online schedule planner for the current day 
+A style online schedule planner for the current day that
+* uses bootstrap v4.6 as a page template
+* display the current (local machine) date and time in the jumbotron
+* Hourly time slots for scheduling events during office hours. This app allows user to input entries for 13 hourly time slots from 0700h to 1900h.
+* Allow users to enter events for the current or future time slots
+* Once the user saved an entry, it is displayed for the time slot.
+* Users can enter more than one event (subject to local storage limits)
+* Each hourly timeslot is colour coded to represent "past", "preent" and "future"
+* The event data that user entered persists on page refresh.
+
 
 ### Extra Features
 * A randam inspirational quote of the day rendered on page refresh from a quotes data bank of 30+ quotes
 * Two (or more) post-it notes on the side bar for reminders
 * Entry (and rendering) of more than one event for each time slot.
-* A button to remove previous day entries to clear up local storage
+* A button to remove previous day entries to clear up local storage.
+* Previous days entries are not presented in the current day schedule.
 * Two buttons for testing this app (to be removed after go-live):
   ** Button for creating test data for the app
   ** Button to switch between local machine time and a default time of 12 noon.
