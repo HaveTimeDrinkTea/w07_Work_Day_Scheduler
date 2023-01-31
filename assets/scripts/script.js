@@ -14,7 +14,7 @@ $(document).ready(function() {
    
    // console.log(today.toLocaleDateString());
    
-   $('#todayDate').text("BRAND NEW FABULOUS " + moment(thisMoment).format("Do MMMM YYYY"));
+   $('#todayDate').text("Today is a Brand New " + moment(thisMoment).format("Do MMMM YYYY"));
    
    
    //-- Get current date and hour
