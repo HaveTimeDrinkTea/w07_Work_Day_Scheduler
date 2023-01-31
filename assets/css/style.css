@@ -76,6 +76,13 @@ button:active {
   color: var(--fontVintage);
 }
 
+/* .btnSave {
+  display: inline;
+} */
+
+.btnDelete {
+  display: none;
+}
 
 
 /* header and footer  */
