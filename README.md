@@ -27,7 +27,9 @@ The JScript will produce the output dyanmically to the webpage pages as part of 
 
 ### Further Improvements
 
-* To allow users to delete or amend a previously entry. This can be done by adding an ID to each entry (and stored in local storage)
+* To allow users to delete or amend a previously entry. 
+  * This can be done by generating an ID (as a counter) to each entry stored in the Local Storage everytime the Local Storage data is called. 
+  * The IDs can then be inserted into Local Storage is done when every there is a new input or amendment or deletion. 
 * To allow users to enter text for the two post-it notes in the side bar. This "Post-It note" functionality should allow user to amend or delete any notes.  These notes will be stored in the localstorage.
 
 
