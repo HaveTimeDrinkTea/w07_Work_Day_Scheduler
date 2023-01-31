@@ -54,6 +54,7 @@ $(document).ready(function() {
    
    
    let EntryStoredTodayOnly;
+
    
    //-- 
    function init() {
@@ -90,17 +91,23 @@ $(document).ready(function() {
          for (let i = 0; i < slotEntryStoredByID.length; i++) {
             console.log("SlotEntry for", slotHourDisplay + ":", slotEntryStoredByID);
             console.log("selected text:", slotEntryStoredByID.userText);
-   
-            textToDisplay = textToDisplay + "<br><i class='fa fa-thumb-tack' aria-hidden='true'></i> " + slotEntryStoredByID[i].userText;
-         
+
+            let selectedText = "<i class='fa fa-thumb-tack' aria-hidden='true'></i> " + slotEntryStoredByID[i].userText;
+
+            if (i = 0) {
+               textToDisplay = selectedText;
+            } else {
+               textToDisplay = textToDisplay + "<br>" + selectedText;
+            }
             $("#t"+ slotHourStringID + "Entry").html(textToDisplay);
          }
          textToDisplay = "";
          ;
-      } else {
+      } 
+      else {
          console.log("I'm here in display!");
-      };
-   
+      }
+      ;
    }
    //-- end of renderUserEntry(slotHourStringID)
    
