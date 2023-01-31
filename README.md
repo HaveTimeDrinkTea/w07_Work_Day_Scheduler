@@ -84,11 +84,7 @@ Screen dump of the deployed webpage:
 
 
 
-### Colour-coded time slots and multiply entries per time slot
-![Deployed Webpage](assets/images/Work_Day_Scheduler1.png)
-
-
-### User Entry in Current Hour Time Slot
+### User Entry in Current Hour Time Slot / Colour-coded time slots and multiply entries per time slot
 ![Deployed Webpage](assets/images/Work_Day_Scheduler2.png)
 
 
